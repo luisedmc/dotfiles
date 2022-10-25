@@ -14,4 +14,8 @@ My configuration files.
 </ul>
 
 <br>
+<<<<<<< HEAD
 <img title="Workstation" alt="workstation" src="workstation.png">
+=======
+<img title="Workstation" alt="workstation" src="workstation.png">
+>>>>>>> a1db0c0909819aca6c38cae6ca6d7aa381a886f3
