@@ -1,7 +1,7 @@
 # .Dotfiles
 My configuration files.
 
-## Packages:
+## Packages
 <ul>
 <li>bumblebee-status</li>
 <li>code</li>
