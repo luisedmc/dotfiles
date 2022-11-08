@@ -26,5 +26,5 @@ vim.opt.listchars:append("tab:> ")
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.cursorline = true
-vim.opt.cursorcolumn = true
+vim.opt.cursorcolumn = false
 vim.opt.swapfile = false
