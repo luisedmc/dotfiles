@@ -14,10 +14,10 @@ My configuration files.
 
 ## Details
 <ul>
-<li><b>WM:</b> i3</li>
+<li><b>WM:</b> i3-gaps</li>
 <li><b>Distro:</b> Arch</li>
 <li><b>Bar:</b> bumblebee-status </li>
-<li><b>Terminal:</b> zsh </li>
+<li><b>Terminal:</b> Alacritty </li>
 <li><b>Text Editor:</b> Neovim </li>
 </ul>
 
