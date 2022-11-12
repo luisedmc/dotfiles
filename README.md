@@ -10,6 +10,7 @@ My configuration files.
 <li>i3blocks</li>
 <li>spotify</li>
 <li>mpv</li>
+<li>flameshot</li>
 </ul>
 
 ## Details
@@ -22,4 +23,4 @@ My configuration files.
 </ul>
 
 <br>
-<img title="Workstation" alt="workstation" src="workstation.png">
+<img title="Workspace" alt="workspace" src="workspace.png">
