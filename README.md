@@ -7,7 +7,6 @@ My configuration files.
 <li>code</li>
 <li>notion-app</li>
 <li>qbittorrent</li>
-<li>i3blocks</li>
 <li>spotify</li>
 <li>mpv</li>
 <li>flameshot</li>
