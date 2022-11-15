@@ -1,4 +1,4 @@
-set $mod Mod1
+	set $mod Mod1
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -152,13 +152,13 @@ mode "resize" {
 }
 
 # i3 gaps
-for_window [class="^.*"] border pixel 0
-gaps inner 7
-gaps outer 4
+for_window [class="^.*"] border pixel 2
+gaps inner 5
+gaps outer 5
 
 # Border Colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused          #dfe0f7 #dfe0f7 #dfe0f7 #dfe0f7   #dfe0f7
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -166,20 +166,18 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# bumblebee-status modules
 bar {
 	wheel_up_cmd nop
 	wheel_down_cmd nop
 	#position top
 	font pango: JetBrains Mono 11
 	status_command ~/.local/bin/bumblebee-status \
-	-m spotify pomodoro kernel disk memory weather date time \
-	-p pomodoro.work=50 time.format="%H:%M" date.format="%a, %b %d %Y" \
-	-t iceberg-contrast
+	-m spotify pomodoro cpu2 disk memory weather network date time \
+	-p pomodoro.work=50 cpu2.layout="cpu2.cpuload" nic.format="{intf}" time.format="%H:%M" date.format="%a, %b %d %Y" \
+	-t gruvbox-powerline
 }
 
 #exec --no-startup-id picom --config ~/.config/picom/picom.conf
-#exec --no-startup-id polybar example -r
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xcompmgr -c &
