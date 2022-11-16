@@ -175,7 +175,7 @@ bar {
 	status_command ~/.local/bin/bumblebee-status \
 	-m spotify pomodoro cpu2 disk memory weather network date time \
 	-p pomodoro.work=50 cpu2.layout="cpu2.cpuload" nic.format="{intf}" time.format="%H:%M" date.format="%a, %b %d %Y" \
-	-t gruvbox-powerline
+	-t iceberg-contrast
 }
 
 #exec --no-startup-id picom --config ~/.config/picom/picom.conf
