@@ -1,99 +1,98 @@
 {
-    "layer": "bottom",
-    "position": "top",
-    "height": 30,
-    "spacing": 5,
-    "modules-left": ["custom/launcher", "wlr/workspaces"],
-    "modules-center": ["wlr/window", "custom/spotify"],
-    "modules-right": ["tray", "custom/weather", "custom/storage", "pulseaudio", "network", "clock"],
-    "wlr/mode": {
-        "format": " {}"
-    },
-
-    "wlr/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate"
-    },
-
-    "hyprland/window": {
-        "format": "{}"
-    },
-
-    "clock": {
-        "format": "{:%a %d %b %H:%M}",
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-        "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
-        "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
-        "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "on-scroll": {
-                    "calendar": 1
-                     }
-    },
-
-    "network": {
-        "interval": 1,
-        "format-wifi": "直 {signalStrength}%",
-        "format-ethernet": " Ethernet",
-        "format-disconnected": "睊 Disconnected"
-    },
-
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}% {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "婢",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-
-    "tray": {
-        "spacing": 10
-    },
-
-    "custom/spotify": {
-        "interval": 1,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/spotify.sh",
-        "exec-if": "pgrep spotify",
-        "escape": true
-    },
-
-    "custom/storage": {
-        "format": " {}",
-        "format-alt": "{percentage}% ",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 60,
-        "exec": "~/.config/waybar/modules/storage.sh"
-    },
-
-    "custom/launcher": {
-        "format": "",
-        "on-click": "rofi -show drun"
-    },
-
-    "custom/weather": {
-        "format": "{}",
-        "format-alt": "{alt}: {}",
-        "format-alt-click": "click-right",
-        "interval": 1800,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/weather.sh",
-        "exec-if": "ping wttr.in -c1"
-    },
-
-    "custom/test": {
-        "format": "{}",
-        "exec": "/tmp/test blub",
-        "param": "blah",
-        "interval": 5
+  "layer": "bottom",
+  "position": "top",
+  "height": 28,
+  "spacing": 5,
+  "modules-left": [
+    "custom/launcher",
+    "wlr/workspaces"
+  ],
+  "modules-center": [
+    "custom/spotify"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/weather",
+    "custom/storage",
+    "pulseaudio",
+    "network",
+    "clock"
+  ],
+  "wlr/mode": {
+    "format": " {}"
+  },
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate"
+  },
+  "hyprland/window": {
+    "format": "{}"
+  },
+  "clock": {
+    "format": "{:%a %d %b %H:%M}",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
+    "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
+    "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+    "on-scroll": {
+      "calendar": 1
     }
+  },
+  "network": {
+    "interval": 1,
+    "format-wifi": "直 {signalStrength}%",
+    "format-ethernet": " Ethernet",
+    "format-disconnected": "睊 Disconnected"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}% {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": "婢",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "custom/spotify": {
+    "interval": 1,
+    "return-type": "json",
+    "exec": "~/.config/waybar/modules/spotify.sh",
+    "exec-if": "pgrep spotify",
+    "escape": true
+  },
+  "custom/storage": {
+    "format": " {}",
+    "format-alt": "{percentage}% ",
+    "format-alt-click": "click-right",
+    "return-type": "json",
+    "interval": 60,
+    "exec": "~/.config/waybar/modules/storage.sh"
+  },
+  "custom/launcher": {
+    "format": "",
+    "on-click": "rofi -show drun"
+  },
+  "custom/weather": {
+    "format": "{}",
+    "format-alt": "{alt}: {}",
+    "format-alt-click": "click-right",
+    "interval": 1800,
+    "return-type": "json",
+    "exec": "~/.config/waybar/modules/weather.sh",
+    "exec-if": "ping wttr.in -c1"
+  }
 }

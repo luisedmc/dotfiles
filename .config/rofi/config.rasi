@@ -3,7 +3,7 @@ configuration {
   display-window: "Windows:";
   display-run: "relizera";
   drun-display-format: "{icon} {name}";
-  font: "JetBrainsMono Nerd Font Medium 10";
+  font: "JetBrainsMono Nerd Font Bold 11";
   modi: "drun";
   show-icons: true;
   icon-theme: "Papirus";
@@ -12,11 +12,11 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #11121D;
-  bg-alt: #444b6a;
+  bg: #1E1E1E;
+  bg-alt: #09213B;
 
   fg: #FFFFFF;
-  fg-alt: #787c99;
+  fg-alt: #A4A6FB;
 
   background-color: @bg;
   
@@ -27,7 +27,7 @@ configuration {
 }
 
 window {
-  width: 45%;
+  width: 40%;
 }
 
 element {
