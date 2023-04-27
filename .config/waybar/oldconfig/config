@@ -1,0 +1,116 @@
+{
+  // NOTE: Icons: https://github.com/Alexays/Waybar/issues/350
+    "height": 34, // Waybar height (to be removed for auto height)
+    "spacing": 5, // Gaps between modules (4px)
+    "modules-left": ["custom/launcher", "wlr/workspaces"],
+    "modules-center": ["custom/spotify"],
+    "modules-right": ["tray", "pulseaudio", "cpu", "temperature", "network", "clock"],
+    "wlr/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+    },
+
+    "hyprland/window": {
+        "format": "{}"
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+    "clock": {
+        // "format": "<span color='#bf616a'> </span>{:%I:%M %p}",
+        // "format": "<span color='#bf616a'> </span>{:%Y-%m-%d %H:%M %p}",
+        "format": "{:%Y-%m-%d %H:%M %p}",
+        "format-alt": "<span color='#bf616a'> </span>{:%a %b %d}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
+        "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
+        "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "on-scroll": {
+                    "calendar": 1
+                     }
+    },
+
+    // "clock": {
+    //     // "timezone": "America/New_York",
+    //     // "format": " {time}", 
+    //     "format": "{:%H:%M %a %Y-%m-%d}",
+    //     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    //     "format-alt": "{:%H:%M:%S}",
+    //     "interval": 1
+    // },
+
+    "network": {
+        "interval": 1,
+        "format-wifi": "直 {signalStrength}%",
+        "format-ethernet": " Ethernet",
+        "format-disconnected": "睊 Disconnected",
+        // "on-click": "nmtui"
+        // "format-wifi": "{essid} ({signalStrength}%) ",
+        // "format-ethernet": "{ipaddr}/{cidr} ",
+        // "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        // "format": "{volume}% {icon} {format_source}",
+        // "format": "{volume}% {icon}",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "婢",
+        // "format-source": "{volume}% ",
+        // "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false,
+        "on-click": "kitty procs --sortd cpu --watch-interval 2"
+    },
+
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{icon}&#8239;{temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+
+    "custom/launcher": {
+        // "exec": "$HOME/.config/waybar/scripts/spotify.sh",
+        // "return-type": "json",
+        // "max-length": 40,
+        // "format": " <span color='#bf616a'> </span>",
+        // "format": "",
+        "format": "",
+        //"format": "",
+        // "format": " <span color='#bf616a'> 異</span>",
+        // "format": " <span color='#bf616a'> </span>",
+        "on-click": "rofi -show drun",
+    },
+
+    "custom/spotify": {
+        "exec": "$HOME/.config/waybar/scripts/spotify.sh",
+        // "return-type": "json",
+        "max-length": 40,
+        "format": " {}",
+        "on-click": "playerctl play-pause",
+        "on-double-click": "playerctl next",
+        "on-right-click": "on-click-right"
+    }
+}
