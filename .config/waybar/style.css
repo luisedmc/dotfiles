@@ -1,14 +1,14 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: SF Mono, Iosevka, Noto Sans CJK;
+    font-family: Space Mono Nerd Font;
     font-size: 13px;
     font-style: normal;
     min-height: 0;
 }
 
 window#waybar {
-    background: rgba(16, 18, 19, 0.8);
+    background: rgba(16, 18, 19, 0.5);
     color: #cdd6f4
 }
 
@@ -54,7 +54,8 @@ window#waybar {
 #network,
 #custom-brightness,
 #custom-launcher,
-#custom-updates-pacman-aur {
+#custom-updates-pacman-aur,
+#custom-weather {
     background: transparent;
     padding: 5px 5px 5px 5px;
     margin: 5px 5px 5px 5px;
@@ -67,7 +68,8 @@ window#waybar {
     font-weight: bold;
 }
 
-#custom-updates-pacman-aur {
+#custom-updates-pacman-aur,
+#custom-weather {
     color: #cdd6f4;
     font-weight: bold;
 }
@@ -210,12 +212,8 @@ window#waybar {
 }
 
 #disk {
-    background-color: #0c0e0f;
-    /*color: #8EC07C;*/
-    border-radius: 16px;
-    margin: 5px;
-    margin-left: 5px;
+    color: #cdd6f4;
+    border-radius: 8px;
     margin-right: 5px;
-    padding: 0px 10px 0px 10px;
     font-weight: bold;
 }

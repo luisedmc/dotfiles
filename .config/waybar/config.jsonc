@@ -1,16 +1,19 @@
 {
   "position": "top",
   "layer": "top",
-  "height": 14,
+  "height": 28,
+  "spacing": 5,
 
   // Desktop Bar
   "modules-left": ["custom/launcher", "custom/playerctl", "custom/playerlabel"],
   "modules-center": ["wlr/workspaces"],
   "modules-right": [
     "tray",
-    "custom/updates-pacman-aur",
+    "custom/weather",
+    // "custom/updates-pacman-aur",
     "disk",
     "pulseaudio",
+    "network",
     "clock"
   ],
 
@@ -18,15 +21,20 @@
 
   "custom/launcher": {
     "format": "",
-    "on-click": "~/.config/bemenu/evocarbon/run.sh",
     "tooltip": "false"
   },
+
   "clock": {
-    "format": "<span size='12000'></span> {:%I:%M %p}",
-    "tooltip": "true",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "on-click": "~/.config/wofi/evocarbon/wofi-power-menu.sh"
+    "format": "{:%a %d %b %H:%M}",
+    "tooltip-format": "\n<tt><small>{calendar}</small></tt>",
+    "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
+    "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
+    "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+    "on-scroll": {
+      "calendar": 1
+    }
   },
+
   "wlr/workspaces": {
     "active-only": false,
     "all-outputs": true,
@@ -42,37 +50,50 @@
     },
     "sort-by-number": true
   },
+
   "custom/playerctl": {
     "format": "{icon}",
     "return-type": "json",
-    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}}: {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
     "on-click": "playerctl play-pause",
     "on-click-middle": "playerctl previous",
-    "on-click-right": "playerctl next",
-    "format-icons": {
-      "Playing": "<span foreground='#46c880'>󰐌 </span>",
-      "Paused": "<span foreground='#cdd6f4'>󰏥 </span>"
-    }
+    "on-click-right": "playerctl next"
+    // "format-icons": {
+    //   "Playing": "<span foreground='#46c880'>󰐌 </span>",
+    //   "Paused": "<span foreground='#cdd6f4'>󰏥 </span>"
+    // }
   },
+
   "custom/playerlabel": {
-    "format": "<span>{}</span>",
+    "format": "<span> {}</span>",
     "return-type": "json",
     "max-length": 48,
-    "exec": "playerctl -a metadata --format '{\"text\": \"{{title}} - {{markup_escape(artist)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(artist)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{title}} - {{markup_escape(artist)}}\", \"tooltip\": \"{{playerName}}: {{markup_escape(artist)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
     "on-click": "playerctl play-pause",
     "on-click-middle": "playerctl previous",
     "on-click-right": "playerctl next"
   },
+
   "network": {
-    "format-wifi": "<span size='13000'>{icon}</span>",
-    "format-ethernet": "<span size='13000'>󰈀</span>",
-    "format-linked": "<span size='13000'>󰈀</span>",
-    "format-disconnected": "<span size='13000'>󰤮</span>",
-    "tooltip-format-wifi": "Connected to: {essid}\nSignal strength: {signalStrength}%",
-    "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
-    "on-click": "xargs -a ~/.config/bemenu/evocarbon/config networkmanager_dmenu",
-    "on-click-right": "nm-connection-editor"
+    "interval": 1,
+    "format-wifi": "直 {signalStrength}%",
+    "format-ethernet": "",
+    "format-disconnected": "睊 Disconnected",
+    "tooltip": 1,
+    "tooltip-format": "Ethernet"
   },
+
+  //   "network": {
+  //     "format-wifi": "<span size='13000'>{icon}</span>",
+  //     "format-ethernet": "<span size='13000'>󰈀</span>",
+  //     "format-linked": "<span size='13000'>󰈀</span>",
+  //     "format-disconnected": "<span size='13000'>󰤮</span>",
+  //     "tooltip-format-wifi": "Connected to: {essid}\nSignal strength: {signalStrength}%",
+  //     "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+  //     "on-click": "xargs -a ~/.config/bemenu/evocarbon/config networkmanager_dmenu",
+  //     "on-click-right": "nm-connection-editor"
+  //   },
+
   "pulseaudio": {
     "format": "<span size='12000'>{icon}</span> {volume}%",
     "format-muted": "<span size='12000' foreground='#ff7eb6'></span> {volume}%",
@@ -89,35 +110,19 @@
     "on-click-right": "pavucontrol"
   },
 
-  "custom/updates-pacman-aur": {
-    "exec-on-event": true,
-    "format": "<span size='12000'></span> {}",
-    "exec": "$HOME/.config/waybar/scripts/updates-pacman-aur.sh",
-    "interval": 300,
-    "on-click": "kitty -c .config/kitty/evocarbon/kitty.conf sh -c 'sudo pacman -Syu ; echo Done - Press enter to exit; read _'",
-    "on-click-right": "kitty -c .config/kitty/evocarbon/kitty.conf sh -c 'yay -Sua --sudoloop ; echo Done - Press enter to exit; read _'",
-    "on-click-middle": "kitty -c .config/kitty/evocarbon/kitty.conf sh -c 'yay -Syu --sudoloop ; echo Done - Press enter to exit; read _'"
+  "custom/weather": {
+    "format": "{}",
+    "format-alt": "{alt}: {}",
+    "format-alt-click": "click-right",
+    "interval": 1800,
+    "return-type": "json",
+    "exec": "$HOME/.config/waybar/scripts/weather.sh",
+    "exec-if": "ping wttr.in -c1"
   },
+
   "tray": {
     "icon-size": 16,
     "spacing": 8
-  },
-
-  // Desktop only
-
-  "custom/brightness": {
-    // Controls brightness of external display (hdmi/dp) via 'ddcutil'
-    // User needs to install the 'ddcutil' and 'i2c-tools' packages, and be part of the i2c group
-    "format": "{}",
-    "exec": "$HOME/.config/waybar/scripts/external-brightness.sh",
-    "exec-on-event": false,
-    "interval": "once",
-    "signal": 1,
-    // Change `--bus X` below with the number of your monitor bus, detected with `ddcutil detect`
-    "on-scroll-up": "ddcutil setvcp 10 + 10 --sleep-multiplier .1 --bus 3 --noverify; pkill -SIGRTMIN+1 waybar",
-    "on-scroll-down": "ddcutil setvcp 10 - 10 --sleep-multiplier .1 --bus 3 --noverify; pkill -SIGRTMIN+1 waybar",
-    // Needs wlsunset to set night light
-    "on-click": "pkill wlsunset || wlsunset -T 5500"
   },
 
   // Laptop only
