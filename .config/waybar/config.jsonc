@@ -77,7 +77,7 @@
   "network": {
     "interval": 1,
     "format-wifi": "直 {signalStrength}%",
-    "format-ethernet": "",
+    "format-ethernet": " Eth",
     "format-disconnected": "睊 Disconnected",
     "tooltip": 1,
     "tooltip-format": "Ethernet"

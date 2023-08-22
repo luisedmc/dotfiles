@@ -23,7 +23,7 @@ go
 goland
 grim
 grub
-hyprland-nvidia-git
+hyprland
 hyprpaper-git
 imagemagick
 intel-ucode
@@ -63,7 +63,6 @@ qbittorrent
 qt5-wayland
 qt6-wayland
 ranger
-rofi-lbonn-wayland-git
 seatd
 slurp
 spotify

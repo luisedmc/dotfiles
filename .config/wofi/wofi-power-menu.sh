@@ -6,11 +6,11 @@ selected=$(echo -e $entries|wofi -c ~/.config/wofi/config -s ~/.config/wofi/styl
 
 case $selected in
   shutdown)
-    loginctl poweroff;;
+    shutdown now;;
   reboot)
-    loginctl reboot;;
+    reboot;;
   suspend)
-    loginctl suspend;;
+    systemctl suspend;;
   standby)
     sleep 1 && hyprctl dispatch dpms off;;
   logout)
