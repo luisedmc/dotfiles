@@ -1,0 +1,88 @@
+{
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.letterSpacing": 0.5,
+  "terminal.integrated.fontFamily": "SpaceMono Nerd Font",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.enablePersistentSessions": true,
+  "terminal.integrated.persistentSessionReviveProcess": "onExit",
+
+  "workbench.editor.restoreViewState": true,
+  "workbench.colorTheme": "Vesper",
+  "workbench.settings.editor": "ui",
+  "workbench.sideBar.location":  "right",
+
+  "breadcrumbs.enabled": false,
+
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+
+  "editor.wordWrap": "bounded",
+  "editor.tabSize": 2,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "Iosevka Mayukai Codepro",
+  "editor.fontSize": 14.855,
+
+  "apc.font.family": "SpaceMono Nerd Font",
+  "apc.activityBar": {
+    "position": "bottom",
+    "hideSettings": true,
+    "size": 24
+  },
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 20,
+    "fontSize": 11
+  },
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 8,
+      "y": 10
+    }
+  },
+  "apc.header": {
+    "height": 34,
+    "fontSize": 14
+  },
+  "apc.listRow": {
+    "height": 21,
+    "fontSize": 13
+  },
+
+  "window.commandCenter": false,
+  "window.restoreFullscreen": true,
+  "window.restoreWindows": "all",
+  "window.newWindowDimensions": "offset",
+
+  "workbench.layoutControl.enabled": false,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+
+  // used by the toggle excluded files extension
+  "files.exclude": {
+    "**/.open-next": true,
+    "**/.sst": true,
+    "**/.nx": true,
+    "**/.turbo": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true,
+    "**/.husky": true,
+    "**/.github": true,
+    "**/.gitignore": true,
+    "**/dist": true,
+    "**/.next": true,
+    "**/*.tsbuildinfo": true,
+    "**/.astro": true
+  }
+}
