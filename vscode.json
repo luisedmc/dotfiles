@@ -3,7 +3,6 @@
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.letterSpacing": 0.5,
   "terminal.integrated.fontFamily": "SpaceMono Nerd Font",
-  "terminal.integrated.fontSize": 12,
   "terminal.integrated.enablePersistentSessions": true,
   "terminal.integrated.persistentSessionReviveProcess": "onExit",
 
@@ -21,8 +20,8 @@
   "editor.tabSize": 2,
   "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
-  "editor.fontFamily": "Iosevka Mayukai Codepro",
-  "editor.fontSize": 14.855,
+  "editor.fontFamily": "Lilex",
+  "editor.fontSize": 15.255,
 
   "apc.font.family": "SpaceMono Nerd Font",
   "apc.activityBar": {
@@ -84,5 +83,21 @@
     "**/.next": true,
     "**/*.tsbuildinfo": true,
     "**/.astro": true
-  }
+  },
+  "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "workbench.startupEditor": "none",
+  "vsicons.dontShowNewVersionMessage": true,
+  "redhat.telemetry.enabled": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "code-runner.runInTerminal": true,
+  "git.openRepositoryInParentFolders": "always",
+  "terminal.integrated.fontSize": 14.755,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "git.ignoreMissingGitWarning": true
 }
