@@ -11,7 +11,7 @@
   "workbench.colorTheme": "Vesper",
   "workbench.settings.editor": "ui",
   "workbench.sideBar.location":  "right",
-  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "workbench.iconTheme": "chalice-icon-theme",
   "workbench.startupEditor": "none",
   "workbench.layoutControl.enabled": false,
   
@@ -26,12 +26,14 @@
   "editor.minimap.enabled": false,
   "editor.fontFamily": "SF Mono",
   "editor.fontSize": 15.255,
+  "editor.scrollbar.vertical": "hidden",
   
   "window.commandCenter": false,
   "window.restoreFullscreen": true,
   "window.restoreWindows": "all",
   "window.newWindowDimensions": "offset",
   "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "native",
   
   "apc.font.family": "SF Mono",
   "apc.activityBar": {
@@ -46,7 +48,8 @@
     "fontSize": 10
   },
   "apc.electron": {
-    "titleBarStyle": "hiddenInset",
+    "titleBarStyle": "hidden",
+    "frame": false,
     "trafficLightPosition": {
       "x": 8,
       "y": 10
