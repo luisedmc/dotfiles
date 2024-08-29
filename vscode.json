@@ -1,15 +1,19 @@
 {
+  "terminal.integrated.fontSize": 14.055,
   "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.letterSpacing": 0.5,
   "terminal.integrated.fontFamily": "SF Mono",
   "terminal.integrated.enablePersistentSessions": true,
   "terminal.integrated.persistentSessionReviveProcess": "onExit",
-  
+
   "workbench.editor.restoreViewState": true,
   "workbench.colorTheme": "Vesper",
   "workbench.settings.editor": "ui",
   "workbench.sideBar.location":  "right",
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "workbench.startupEditor": "none",
+  "workbench.layoutControl.enabled": false,
   
   "breadcrumbs.enabled": false,
   
@@ -23,17 +27,23 @@
   "editor.fontFamily": "SF Mono",
   "editor.fontSize": 15.255,
   
+  "window.commandCenter": false,
+  "window.restoreFullscreen": true,
+  "window.restoreWindows": "all",
+  "window.newWindowDimensions": "offset",
+  "window.menuBarVisibility": "toggle",
+  
   "apc.font.family": "SF Mono",
   "apc.activityBar": {
     "position": "bottom",
     "hideSettings": true,
-    "size": 24
+    "size": 20
   },
   "apc.statusBar": {
     "position": "editor-bottom",
     "height": 20,
     "fontFamily": "SF Mono",
-    "fontSize": 11
+    "fontSize": 10
   },
   "apc.electron": {
     "titleBarStyle": "hiddenInset",
@@ -43,12 +53,12 @@
     }
   },
   "apc.header": {
-    "height": 34,
-    "fontSize": 14
+    "height": 26,
+    "fontSize": 12
   },
   "apc.listRow": {
     "height": 21,
-    "fontSize": 13
+    "fontSize": 12
   },
   "apc.stylesheet": {
     ".inline-tabs-placeholder": "display: none !important;",
@@ -92,12 +102,6 @@
     }
   },
 
-  "window.commandCenter": false,
-  "window.restoreFullscreen": true,
-  "window.restoreWindows": "all",
-  "window.newWindowDimensions": "offset",
-  
-  "workbench.layoutControl.enabled": false,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
@@ -127,9 +131,7 @@
     "**/.astro": true
   },
   "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
-  "workbench.iconTheme": "eq-material-theme-icons-darker",
-  "workbench.startupEditor": "none",
-  "vsicons.dontShowNewVersionMessage": true,
+
   "redhat.telemetry.enabled": false,
   "github.copilot.enable": {
     "*": false,
@@ -140,6 +142,5 @@
   "code-runner.runInTerminal": true,
   "git.openRepositoryInParentFolders": "always",
   "github.copilot.editor.enableAutoCompletions": true,
-  "git.ignoreMissingGitWarning": true,
-  "terminal.integrated.fontSize": 14.055
+  "git.ignoreMissingGitWarning": true
 }
