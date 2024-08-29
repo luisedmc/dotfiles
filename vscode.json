@@ -5,24 +5,24 @@
   "terminal.integrated.fontFamily": "SF Mono",
   "terminal.integrated.enablePersistentSessions": true,
   "terminal.integrated.persistentSessionReviveProcess": "onExit",
-
+  
   "workbench.editor.restoreViewState": true,
   "workbench.colorTheme": "Vesper",
   "workbench.settings.editor": "ui",
   "workbench.sideBar.location":  "right",
-
+  
   "breadcrumbs.enabled": false,
-
+  
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
-
+  
   "editor.wordWrap": "bounded",
   "editor.tabSize": 2,
   "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
   "editor.fontFamily": "SF Mono",
   "editor.fontSize": 15.255,
-
+  
   "apc.font.family": "SF Mono",
   "apc.activityBar": {
     "position": "bottom",
@@ -50,12 +50,53 @@
     "height": 21,
     "fontSize": 13
   },
+  "apc.stylesheet": {
+    ".inline-tabs-placeholder": "display: none !important;",
+    ".monaco-hover": "border: 1px solid #007ACC !important;",
+    ".tree": "border: 1px solid #007ACC !important;",
+    ".quick-input-widget": {
+        "width": "900px !important",
+        "left": "41% !important",
+        "top": "250px !important",
+        "padding": "15px !important",
+        "background-color": "rgb(30, 30, 30) !important",
+        "border-radius": "10px !important",
+        "border": "1px solid #007ACC !important"
+    },
+    ".quick-input-widget .quick-input-header": "padding:0px!important;margin-bottom:10px;",
+    ".quick-input-widget .monaco-inputbox": {
+        "padding": "10px !important",
+        "border-radius": "5px!important"
+    },
+    ".quick-input-widget .monaco-list-rows": "top: 0 !important;max-height:670px;min-height:300px;",
+    ".quick-input-widget .monaco-list-row": "position:static!important;border-bottom: 1px solid #333942;padding:5px!important;height:auto!important;",
+    ".quick-input-widget .quick-input-list-entry": "position:relative;padding:0 5px 0px 15px;",
+    ".quick-input-widget .quick-input-list-entry .codicon[class*=codicon-]": "font-size:12px;",
+    ".quick-input-widget .quick-input-list .quick-input-list-entry.quick-input-list-separator-border": "border-top-width:0px!important;",
+    ".monaco-editor .cursor": "background: linear-gradient(to bottom, #FFFFFF, #FFFFFF) !important;  color: #161616 !important",
+    ".title-actions": "display: none !important",
+    ".quick-input-widget.show-file-icons, .editor-widget.find-widget": "box-shadow: none !important",
+    ".filematch .monaco-icon-label:before, .custom-list-row.results .monaco-list-row .monaco-icon-label:before": "background-position: 0 bottom !important",
+    ".filematch .monaco-count-badge": "padding: 5px 6px 0 6px !important",
+    ".sidebar .title-label": "padding: 0 !important",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
+    ".sidebar": "border: none !important",
+    ".quick-input-list-row div": "display: flex !important; align-items: center !important",
+    ".panel .composite.title": "visibility: hidden !important",
+    ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "padding-bottom: 6px !important",
+    ".sidebar .title-label h2": "line-height: 2.8 !important",
+    ".monaco-editor .scroll-decoration": "display: none !important",
+    ".monaco-scrollable-element > .shadow.top": "display: none !important",
+    ".editor-group-watermark": {
+        "font-size": "15px !important"
+    }
+  },
 
   "window.commandCenter": false,
   "window.restoreFullscreen": true,
   "window.restoreWindows": "all",
   "window.newWindowDimensions": "offset",
-
+  
   "workbench.layoutControl.enabled": false,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
@@ -63,7 +104,7 @@
   "typescript.updateImportsOnFileMove.enabled": "never",
   "explorer.confirmDragAndDrop": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
-
+  
   // used by the toggle excluded files extension
   "files.exclude": {
     "**/.open-next": true,
