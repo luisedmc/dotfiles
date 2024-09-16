@@ -1,91 +1,104 @@
-# Sets user-defined palette
-palette = "catppuccin_mocha"
+#Location: ~/.config/starship.toml
+#What_is_starship: https://starship.rs/
 
-# Setups
-format="$directory$git_branch$character"
-right_format = """$git_status$cmd_duration"""
-add_newline = true 
+add_newline = true
+command_timeout = 2000
 
-# Other languages configurations:
-c.disabled = true
-cmake.disabled = true
-haskell.disabled = true
-python.disabled = true
-ruby.disabled = true
-rust.disabled = true
-perl.disabled = true
-package.disabled = true
-lua.disabled = true
-nodejs.disabled = true
-java.disabled = true
-golang.disabled = true
+format = """$env_var$os$username$directory$git_branch$git_status
+$character
+"""
 
-[conda]
-format = ' [$symbol$environment](dimmed green) '
-
-# Prompt symbols 
 [character]
-success_symbol = "[](#26ff00 bold)"
-error_symbol = "[ ](#ff0000 bold)"
-vicmd_symbol = "[](peach)"
+success_symbol = "╰⎯"
+error_symbol = "╰⎯"
+# ╭╴ ╰─
 
-[directory]
-format = "[]($style)[ ](bg:base fg:#bcbbbb)[$path](bg:base fg:#bcbbbb)[ ]($style)"
-style = "bg:none fg:base"
-truncation_length = 3
-truncate_to_repo=false
-
-[git_branch]
-format = "[]($style)[[ ](bg:base fg:green bold)$branch](bg:base fg:lavender)[ ]($style)"
-style = "bg:none fg:base"
-
-[git_status]
-# $all status$ahead_behind
-format = "[]($style)[$all_status$ahead_behind](bg:base fg:yellow)[ ]($style)"
-style = "bg:none fg:base"
-conflicted = "="
-ahead =	"⇡${count}"
-behind = "⇣${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-up_to_date = " 󰄸 "
-untracked = "?${count}"
-stashed = ""
-modified = "!${count}"
-staged = "+${count}"
-renamed = "»${count}"
-deleted = "${count}"
-
-[cmd_duration]
-min_time = 1
-# duration & style 
-format = "[]($style)[[神](bg:base fg:#bcbbbb)$duration](bg:base fg:text)[ ]($style)"
+[env_var]
+symbol = "╭╴"
+variable = 'SHELL'
+format = "$symbol"
 disabled = false
-style = "bg:none fg:base"
 
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#081427"
-mantle = "#181825"
-crust = "#11111b"
+
+#warp-Drop ugly default prompt characters
+#success_symbol = ""
+#error_symbol = ""
+
+# ---
+
+[os]
+format = '[$symbol](bold white) '   
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = '󰣇'
+Ubuntu = ''
+Macos = '󰀵'
+Unknown = '󰠥'
+
+# ---y
+
+# Shows the username
+[username]
+style_user = 'yellow bold'
+style_root = 'black bold'
+format = '[//](white bold) [$user](#EC2D4C) ' # EC2D4C
+disabled = false
+show_always = true
+
+# Shows current directory
+[directory]
+truncation_length = 0
+truncation_symbol = '…/'
+home_symbol = '~'
+# read_only_style = '197'
+read_only = '  '
+format = '[//](white bold) [$path]($style)[$read_only]($read_only_style) '
+style = '#D9DADB' # yellow bold
+
+
+# Shows current git branch
+[git_branch]
+# symbol = ' '
+symbol = ' '
+format = '[//](white bold) [$symbol\[$branch\]]($style) '
+# truncation_length = 0
+# truncation_symbol = '…/'
+style = 'bold green'
+
+# Shows current git status
+[git_status]
+disabled = true
+format = '[ $all_status $ahead_behind]($style) '
+style = 'bold green'
+conflicted = '🏳'
+up_to_date = ''
+untracked = ' '
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = ' '
+modified = ' '
+staged = '[++\($count\)](green)'
+renamed = '襁 '
+deleted = ' '
+
+[vagrant]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[helm]
+disabled = true
+
+
+[nodejs]
+disabled = true
+
+[ruby]
+disabled = true
+
+[terraform]
+disabled = true

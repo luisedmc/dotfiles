@@ -3,7 +3,7 @@
 }
 
 window {
-    background: rgba(16, 18, 19, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     margin: 1px;
     border: 2px solid #0c0e0f;
     border-radius: 15px 15px 15px 15px;
@@ -13,7 +13,7 @@ window {
     border: none;
     box-shadow: none;
     background-color: rgba(16, 18, 19, 0);
-    color: #cdd6f4;
+    color: #ffffff;
 }
 
 #inner-box {
@@ -43,5 +43,10 @@ window {
 }
 
 #text:selected {
+    background: none;
     color: #ff7eb6;
+}
+
+#img:selected {
+    background: none;
 }

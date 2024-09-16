@@ -1,10 +1,10 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "sixel",
-    "source": "/Users/relizera/.local/share/fastfetch/logos/macos-mojave.jpg",
-    "width": 38,
-    "height": 13,
+    "type": "auto",
+    "source": "/home/marin/Documents/customs/icons/alya1.jpg",
+    "width": 24,
+    "height": 10,
     "padding": {
       "top": 1,
       "right": 0,
@@ -13,14 +13,14 @@
   },
   "display": {
     "separator": "  ",
-    "color": "blue"
+    "color": "red"
   },
   "modules": [
     "break",
     "break",
     {
       "type": "title",
-      "key": "  "
+      "key": "  "
       //   "key": "  "
       //   "format": "{1}"
     },
@@ -32,24 +32,19 @@
     },
     {
       "type": "os",
-      "key": "  ",
+      "key": "  ",
       //   "key": "  ",
       "format": "{2}"
     },
     {
       "type": "kernel",
-      "key": "  ",
+      "key": "  ",
       //   "key": "  ",
       "format": "{1} {2}"
     },
     {
       "type": "terminal",
       "key": "  "
-      //   "key": "  "
-    },
-    {
-      "type": "shell",
-      "key": "  "
       //   "key": "  "
     },
     {
@@ -65,11 +60,6 @@
     {
       "type": "wm",
       "key": "  "
-      //   "key": "  "
-    },
-    {
-      "type": "memory",
-      "key": "  󰑭"
       //   "key": "  "
     },
     {
