@@ -7,4 +7,3 @@
 - **App Launcher:** <a href="https://hg.sr.ht/~scoopta/wofi">Wofi</a>
 
 <br>
-<img title="Workspace" alt="workspace" src="workspace.png">
