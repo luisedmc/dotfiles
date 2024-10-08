@@ -1,2 +1,3 @@
-require("marin")
-
+vim.loader.enable()
+require("core")
+require("plugins")
