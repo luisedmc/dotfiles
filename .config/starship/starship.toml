@@ -43,7 +43,7 @@ Unknown = '󰠥'
 [username]
 style_user = 'yellow bold'
 style_root = 'black bold'
-format = '[//](white bold) [$user](#EC2D4C) ' # EC2D4C
+format = '[//](white bold) [$user](#CB0000) ' # EC2D4C # #CB0000
 disabled = false
 show_always = true
 
@@ -52,8 +52,7 @@ show_always = true
 truncation_length = 0
 truncation_symbol = '…/'
 home_symbol = '~'
-# read_only_style = '197'
-read_only = '  '
+# read_only_style = '197' read_only = '  '
 format = '[//](white bold) [$path]($style)[$read_only]($read_only_style) '
 style = '#D9DADB' # yellow bold
 
