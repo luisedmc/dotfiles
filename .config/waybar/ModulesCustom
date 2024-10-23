@@ -10,6 +10,13 @@
 	"tooltip": true
 },
 
+"custom/gpu_temperature": {
+	"format": "{}",
+	"exec": "$HOME/.config/hypr/UserScripts/GPUTemperature.sh",
+	"tooltip": true,
+	"return-type": "json"
+},
+
 "custom/file_manager": {
 	"format": " ",
 	"on-click": "thunar",
@@ -67,14 +74,9 @@
 },
 
 "custom/menu": {
-	"format": "",
-	"on-click": "pkill rofi || rofi -show drun -modi run,drun,filebrowser,window",
-	"on-click-middle": "$HOME/.config/hypr/UserScripts/WallpaperSelect.sh",
-	"on-click-right": "$HOME/.config/hypr/scripts/WaybarLayout.sh",
-	"tooltip": true,
-	"tooltip-format": "Left Click: Rofi Menu\nMiddle Click: Wallpaper Menu\nRight Click: Waybar Layout Menu"
+	"format": ""
 },
-// This is a custom cava visualizer
+
 "custom/cava_mviz": {
 	"exec": "$HOME/.config/hypr/scripts/WaybarCava.sh",
 	"format": "{}"

@@ -1,7 +1,3 @@
-/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
-/* .......Crystal Clear....................... */
-/* --- 👍 designed by https://github.com/Krautt  👍 --- */
-
 *{
 	font-family: "JetBrains Mono Nerd Font";
 	font-weight: bold;
@@ -92,6 +88,7 @@ window#waybar.empty #window {
 #custom-cava_mviz,
 #custom-cycle_wall,
 #custom-file_manager,
+#custom-gpu_temperature,
 #custom-keybinds,
 #custom-keyboard,
 #custom-light_dark,

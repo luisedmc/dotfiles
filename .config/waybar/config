@@ -19,6 +19,7 @@
 	"custom/menu",
 	"custom/separator#dot-line",
 	"group/motherboard",
+	"custom/gpu_temperature",
 	"custom/separator#line",
 	"custom/weather",
 	"custom/separator#dot-line",
